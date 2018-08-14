@@ -109,7 +109,7 @@ class Display extends React.Component {
   
 class App extends React.Component {
     render() {
-      return React.createElement( "div",{} , React.createElement(Timer, null)
+      return React.createElement( "div",{} , React.createElement(Stopwatch, null)
       );
     }
 }  
