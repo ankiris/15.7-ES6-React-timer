@@ -63,9 +63,9 @@ class Stopwatch extends React.Component {
         });
     }
     render() {
-        const resultsElement = this.state.resultsTable.map((time, key) => (
+ /*       const resultsElement = this.state.resultsTable.map((time, key) => (
           <Display key={key} time={time} />
-        ));
+        ));*/
         return (
           <div className="container">
             <div className="buttons">
@@ -101,12 +101,12 @@ function pad0(value) {
     }
     return result;
 }
-class Display extends React.Component {
+/*class Display extends React.Component {
     render() {
       return React.createElement(
         "li", { className: "list-item" }, this.times);
     }
-}
+}*/
 
   
 class App extends React.Component {
