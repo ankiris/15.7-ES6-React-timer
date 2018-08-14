@@ -76,10 +76,10 @@ class Stopwatch extends React.Component {
                 <a className="btn btn-warning" href="#" onClick={this.reset.bind(this)}>
                     Reset
                 </a>
-                <a className="btn btn-warning" href="#" onClick={this.savedTime.bind(this)}>
+                <a className="btn btn-warning" href="#" onClick={this.results.bind(this)}>
                     Save results
                 </a>
-                <a className="btn btn-warning" href="#" onClick={this.cleanResults.bind(this)}>
+                <a className="btn btn-warning" href="#" onClick={this.resetResults.bind(this)}>
                     Clean results
                 </a>
             </div>
