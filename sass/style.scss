@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    .container{
+    width: 800px;
+    margin: 0 auto;
+    .buttons {
+        height: 100%;
+        text-align: center;
+        .btn {
+            margin: 5px;
+        min-width: 80px;
+        }
+    }
+    .list {
+        display: flex;
+        .list-item {
+            display: list-item;
+            }
+    }
+    .stoper {
+        border: 2px solid black; 
+        color: #000;
+        font-size: 36px;
+    }
+
+    .results-list {
+        margin: 0 auto;
+        width: 80%;
+        }
+    }
+}

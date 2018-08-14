@@ -1,0 +1,15 @@
+* { box-sizing: border-box; }
+
+* .container { width: 800px; margin: 0 auto; }
+
+* .container .buttons { height: 100%; text-align: center; }
+
+* .container .buttons .btn { margin: 5px; min-width: 80px; }
+
+* .container .list { display: -ms-flexbox; display: flex; }
+
+* .container .list .list-item { display: list-item; }
+
+* .container .stoper { border: 2px solid black; color: #000; font-size: 36px; }
+
+* .container .results-list { margin: 0 auto; width: 80%; }
