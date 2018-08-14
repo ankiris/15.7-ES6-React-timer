@@ -3,7 +3,7 @@ class Stopwatch extends React.Component {
         super(props);
         this.state = {
             running: false;          
-            resultsTable: []
+            resultsTable: [];
         };
         this.times = {
           miliseconds: 0,
@@ -104,7 +104,7 @@ function pad0(value) {
 class Display extends React.Component {
     render() {
       return React.createElement(
-        "li", { className: "list-item" }, this.props.time);
+        "li", { className: "list-item" }, this.times);
     }
 }
 
