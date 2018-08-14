@@ -2,9 +2,7 @@ class Stopwatch extends React.Component {
     constructor(props) {
         super(props);
         this.running = false;
-        this.display = display;
         this.reset();
-        this.print(this.times);
         this.resultsTable = [];
     }
     
@@ -14,9 +12,6 @@ class Stopwatch extends React.Component {
             seconds: 0,
             miliseconds: 0
         };
-    }
-    print() {
-        this.display.innerText = this.format(this.times);
     }
     format(times) {
         return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
@@ -107,7 +102,9 @@ function pad0(value) {
   
 class App extends React.Component {
     render() {
-      return React.createElement( "div",{} , React.createElement(Stopwatch, null)
+      return <div>
+          <Stopwatch />
+      </div>
       );
     }
 }  
