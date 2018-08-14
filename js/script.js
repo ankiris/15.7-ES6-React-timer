@@ -24,7 +24,7 @@ class Stopwatch extends React.Component {
     results() {
         const result = this.format();
         this.setState({
-          resultsTable: [...this.state.resultsTable, result]
+          resultsTable: [...this.resultsTable, result]
         });
       }
     start() {
