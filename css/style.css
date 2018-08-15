@@ -1,15 +1,15 @@
 * { box-sizing: border-box; }
 
-* .container { width: 800px; margin: 0 auto; }
+.container { width: 800px; margin: 0 auto; }
 
-* .container .buttons { height: 100%; text-align: center; }
+.buttons { height: 100%; text-align: center; }
 
-* .container .buttons .btn { margin: 5px; min-width: 80px; }
+.btn { background-color: #456fe0; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; }
 
-* .container .list { display: -ms-flexbox; display: flex; }
+.list { display: -ms-flexbox; display: flex; }
 
-* .container .list .list-item { display: list-item; }
+.list-item { display: list-item; }
 
-* .container .stoper { border: 2px solid black; color: #000; font-size: 36px; }
+.stoper { border: 2px solid black; color: #000; font-size: 36px; }
 
-* .container .results-list { margin: 0 auto; width: 80%; }
+.results-list { margin: 0 auto; width: 80%; }
