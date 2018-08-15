@@ -16,16 +16,17 @@ class Stopwatch extends React.Component {
         }
     }
     reset() {
-        this.setState = {
+        this.setState({
             minutes: 0,
             seconds: 0,
             miliseconds: 0
-        };
+        });
     }
     
     step() {
         if (!this.running) return;
         this.calculate();
+        console.log(this.format)
     }
 
     calculate() {
