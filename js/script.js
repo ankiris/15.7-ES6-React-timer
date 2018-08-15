@@ -6,7 +6,8 @@ class Stopwatch extends React.Component {
             minutes: 0,
             seconds: 0,
             miliseconds: 0,
-            resultsTable: []
+            resultsTable: [],
+            display: display,
         }
     }
     
@@ -83,7 +84,7 @@ class Stopwatch extends React.Component {
                     Clean results
                 </a>
             </div>
-            <div className="stoper">{this.format()}</div>
+            <div className="stoper">{this.format}</div>
             <div className="results-list">
               <ol className="list">{resultsElement}</ol>
             </div>
