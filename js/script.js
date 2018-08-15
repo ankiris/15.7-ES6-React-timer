@@ -27,7 +27,7 @@ class Stopwatch extends React.Component {
         if (!this.running) return;
         this.calculate();
     }
-    
+
     calculate() {
         this.state.miliseconds += 1;
         if (this.state.miliseconds >= 100) {
@@ -80,7 +80,7 @@ class Stopwatch extends React.Component {
                     Clean results
                 </a>
             </div>
-            <div className="stoper">{this.format}</div>
+            <div className="stoper">{this.format.bind(this)}</div>
             <div className="results-list">
               <ol className="list">{resultsElement}</ol>
             </div>
