@@ -1,20 +1,24 @@
 class Stopwatch extends React.Component {
     constructor(props) {
         super(props);
-        this.running = false;
-        this.reset();
-        this.resultsTable = [];
+        this.state = {
+            running: false,
+            minutes: 0,
+            seconds: 0,
+            miliseconds: 0,
+            resultsTable: []
+        }
     }
     
     reset() {
-        this.times = {
+        this.setState = {
             minutes: 0,
             seconds: 0,
             miliseconds: 0
         };
     }
-    format(times) {
-        return `${pad0(times.minutes)}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
+    format() {
+        return `${pad0(this.state.minutes)}:${pad0(this.state.seconds)}:${pad0(Math.floor(this.state.miliseconds))}`;
     }
     results() {
         const result = this.format();
@@ -34,14 +38,14 @@ class Stopwatch extends React.Component {
         this.print();
     }
     calculate() {
-        this.times.miliseconds += 1;
-        if (this.times.miliseconds >= 100) {
-            this.times.seconds += 1;
-            this.times.miliseconds = 0;
+        this.state.miliseconds += 1;
+        if (this.state.miliseconds >= 100) {
+            this.state.seconds += 1;
+            this.state.miliseconds = 0;
         }
-        if (this.times.seconds >= 60) {
-            this.times.minutes += 1;
-            this.times.seconds = 0;
+        if (this.state.seconds >= 60) {
+            this.state.minutes += 1;
+            this.state.seconds = 0;
         }
     }
     stop() {
