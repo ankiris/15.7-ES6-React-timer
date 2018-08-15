@@ -26,7 +26,6 @@ class Stopwatch extends React.Component {
     step() {
         if (!this.running) return;
         this.calculate();
-        console.log(this.format())
     }
 
     calculate() {
@@ -97,12 +96,12 @@ function pad0(value) {
     }
     return result;
 }
-/*class Display extends React.Component {
+class Display extends React.Component {
     render() {
       return React.createElement(
         "li", { className: "list-item" }, this.times);
     }
-}*/
+}
  
 class App extends React.Component {
     render() {
