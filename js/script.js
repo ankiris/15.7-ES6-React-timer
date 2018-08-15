@@ -43,9 +43,9 @@ class Stopwatch extends React.Component {
         return `${pad0(this.state.minutes)}:${pad0(this.state.seconds)}:${pad0(Math.floor(this.state.miliseconds))}`;
     }
     results() {
-        const result = this.format();
+        const resultat = this.format();
         this.setState({
-          resultsTable: [...this.resultsTable, result]
+          resultsTable: [...this.resultsTable, resultat]
         });
       }
     stop() {
@@ -99,7 +99,7 @@ function pad0(value) {
 class Display extends React.Component {
     render() {
       return React.createElement(
-        "li", { className: "list-item" }, this.times);
+        "li", { className: "list-item" }, this.results);
     }
 }
  
