@@ -50,6 +50,7 @@ class Stopwatch extends React.Component {
     }
     print() {
         this.display.innerText = this.format(this.times);
+    }
     stop() {
         this.running = false;
         clearInterval(this.watch);
