@@ -35,6 +35,7 @@ class Stopwatch extends React.Component {
     step() {
         if (!this.running) return;
         this.calculate();
+        this.print();
     }
     calculate() {
         this.state.miliseconds += 1;
@@ -47,6 +48,8 @@ class Stopwatch extends React.Component {
             this.state.seconds = 0;
         }
     }
+    print() {
+        this.display.innerText = this.format(this.times);
     stop() {
         this.running = false;
         clearInterval(this.watch);
