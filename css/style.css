@@ -10,6 +10,6 @@
 
 .list-item { display: list-item; }
 
-.stoper { border: 2px solid black; color: #000; font-size: 36px; }
+.stoper { text-align: center; border: 2px solid black; color: #000; font-size: 36px; }
 
 .results-list { margin: 0 auto; width: 80%; }
