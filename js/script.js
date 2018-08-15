@@ -26,18 +26,18 @@ class Stopwatch extends React.Component {
     step() {
         if (!this.running) return;
         this.calculate();
-        console.log(this.format)
+        console.log(this.format())
     }
 
     calculate() {
-        this.state.miliseconds += 1;
-        if (this.state.miliseconds >= 100) {
-            this.state.seconds += 1;
-            this.state.miliseconds = 0;
+        this.setState({milliseconds: this.state.milliseconds + 1});
+        if (this.state.milliseconds >= 100) {
+            this.setState({seconds: this.state.seconds + 1});
+            this.setState({milliseconds: 0});
         }
         if (this.state.seconds >= 60) {
-            this.state.minutes += 1;
-            this.state.seconds = 0;
+            this.setState({minutes: this.state.minutes + 1});
+            this.setState({seconds: 0});
         }
     }
     format() {
@@ -97,14 +97,13 @@ function pad0(value) {
     }
     return result;
 }
-class Display extends React.Component {
+/*class Display extends React.Component {
     render() {
       return React.createElement(
         "li", { className: "list-item" }, this.times);
     }
-}
-
-  
+}*/
+ 
 class App extends React.Component {
     render() {
       return <div>
@@ -112,7 +111,6 @@ class App extends React.Component {
       </div>
     }
 }  
-
 
 var app = React.createElement(App, null);
 ReactDOM.render(app, document.getElementById("app"));
