@@ -45,7 +45,7 @@ class Stopwatch extends React.Component {
     results() {
         const resultat = this.format();
         this.setState({
-          resultsTable: [...this.resultsTable, resultat]
+            resultsTable: [...this.state.resultsTable, resultat]
         });
       }
     stop() {
@@ -59,7 +59,7 @@ class Stopwatch extends React.Component {
     }
     render() {
         const resultsElement = this.state.resultsTable.map((time, key) => (
-          <Display key={key} time={this.results} />
+          <Display key={key} time={time} />
         ));
         return (
           <div className="container">
