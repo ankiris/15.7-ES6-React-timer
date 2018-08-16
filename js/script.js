@@ -99,7 +99,7 @@ function pad0(value) {
 class Display extends React.Component {
     render() {
       return <li>
-          {this.results}
+          {this.props.time}
       </li>
     }
 }
